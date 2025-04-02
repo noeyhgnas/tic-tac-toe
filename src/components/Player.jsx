@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function Player({ initialName, symbol, isActive}){
+export default function Player({ initialName, symbol, isActive, onChangeName}){
 
     const [playerName, setPlayerName] = useState(initialName);
     const [isEditing, setIsEditing] = useState(false)
@@ -10,7 +10,12 @@ export default function Player({ initialName, symbol, isActive}){
         // setIsEditing(!isEditing) => schedules a state update to true  
         // setIsEditing(!isEditing) => false (시작 지점의 false값을 가지고 변경하므로 true로 변경)
         setIsEditing((ediitng) => !ediitng);
-    }
+        
+        if(isEditing){
+            onChangeName(symbol, playerName);
+        }
+        onChangeName(symbol, playerName);
+    }   
 
     function handleChange(event) {
         //console.log(event);
