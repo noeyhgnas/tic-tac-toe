@@ -10,3 +10,5 @@ export default function Log({ turns }) {
         </ol>
     );
 }
+
+//주석추가
