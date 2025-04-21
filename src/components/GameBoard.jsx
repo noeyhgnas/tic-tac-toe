@@ -2,7 +2,8 @@
 const initialGameBoard = [
     [null, null, null],
     [null, null, null],
-    [null, null, null]
+    [null, null, null],
+    [null,null,null] // 4*4 추가함
 ]
 
 export default function GameBoard({ onSelectSquare, board }) {
