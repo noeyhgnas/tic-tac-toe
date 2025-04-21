@@ -115,7 +115,7 @@ function App() {
         <GameBoard
           onSelectSquare={handleSelectSquare}
           board={gameBoard}
-        />ㅌ  
+        />
       </div>
       <Log turns={gameTurns} />
     </main>
